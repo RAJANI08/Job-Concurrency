@@ -1,0 +1,15 @@
+name: Python Job-Concurrency
+
+on:
+  push:
+
+concurrency:
+  group: Python Job-Concurrency
+  cancel-in-progress: true
+
+jobs:
+  run-python:
+    runs-on: ubuntu-latest
+
+    steps:
+      - run: echo "Running workflow"
